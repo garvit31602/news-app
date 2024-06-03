@@ -1,0 +1,73 @@
+.navbar {
+  background: linear-gradient(to right, #4caf50, #2e7d32);
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-heading {
+  margin: 0;
+  cursor: pointer;
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.navbar-heading:hover {
+  transform: scale(1.1);
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-item {
+  margin-right: 10px;
+}
+
+.category {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type='text'] {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  color: #fff;
+  margin-right: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth background color and box-shadow transition */
+}
+
+.search-bar input[type='text']:focus {
+  background-color: rgba(255, 255, 255, 0.3); /* Lighter semi-transparent background on focus */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adding a subtle shadow on focus */
+}
+
+.search-bar button {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+  color: #4caf50;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #f2f2f2;
+}
