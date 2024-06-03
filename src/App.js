@@ -20,17 +20,12 @@ function App() {
         setNewsData([]); // Set newsData to empty array in case of error
       }
     };
-
     fetchData();
     setSearchTerm("");
   }, [category, searchTerm]);
 
   const openLink = (url) => {
     window.open(url, '_blank');
-  };
-
-  const handleImageError = (e) => {
-    e.target.src = '/placeholder.jpg'; // Ensure this path is correct
   };
 
   return (
@@ -43,7 +38,7 @@ function App() {
               <img src={news.urlToImage} alt={news.title} onError={handleImageError} />
               <div className='card-content'>
                 <p className='card-title'>{news.title}</p>
-                <p className='card-source'>{news.source?.name}</p>
+                <p className='card-source'>{news.source.name}</p>
                 <p className='date'>{new Date(news.publishedAt).toLocaleDateString()}</p>
               </div>
             </div>
