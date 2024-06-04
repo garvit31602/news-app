@@ -35,7 +35,7 @@ function App() {
         {newsData.length > 0 ? (
           newsData.map((news, index) => (
             <div className='card' key={index} onClick={() => openLink(news.url)}>
-              <img src={news.urlToImage} alt={news.title} onError={handleImageError} />
+              <img src={news.urlToImage} alt={news.title}/>
               <div className='card-content'>
                 <p className='card-title'>{news.title}</p>
                 <p className='card-source'>{news.source.name}</p>
