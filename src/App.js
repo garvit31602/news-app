@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './Navbar.js';
 
+const api=`${process.env.REACT_APP_API_KEY}`
+
+console.log(api)
+
 function App() {
   const [newsData, setNewsData] = useState([]);
   const [category, setCategory] = useState(null);
@@ -12,7 +16,7 @@ function App() {
       try {
         const query = searchTerm ? `&q=${searchTerm}` : '';
         const categoryQuery = category ? `&category=${category}` : '';
-        const response = await fetch(`https://newsapi.org/v2/top-headlines?country=in${categoryQuery}${query}&apiKey=e4ad5aa91de643409ef00a0a3d874bbc`);
+        const response = await fetch(`https://newsapi.org/v2/top-headlines?country=in${categoryQuery}${query}&apiKey=${api}`);
         const jsonData = await response.json();
         setNewsData(jsonData.articles || []); // Ensure newsData is always an array
       } catch (error) {
